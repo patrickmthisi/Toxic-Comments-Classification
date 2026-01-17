@@ -3,7 +3,7 @@
 
 # Toxic-Comments-Classification
 ## Project description
-In this project, I built a multi-channel n-gram CNN for multi-label toxicity classification (six labels). The model uses pre-trained GloVe (100d) embeddings to initialize the embedding layer; embeddings are fine-tuned during training. GloVe leverages global co-occurrence statistics while producing embeddings similar in spirit to predictive approaches. Architecturally, the network runs parallel Conv1D branches with kernel sizes 3, 5, and 7 (capturing different n-gram patterns), applies max-pooling and flattening per branch, then concatenates the branch representations and outputs six sigmoid probabilities (one per label):
+In this project, I built a multi-channel n-gram CNN for multi-label toxicity classification (six labels). The model uses pre-trained GloVe (100d) embeddings to initialize the embedding layer; embeddings are fine-tuned during training. GloVe leverages global co-occurrence statistics while producing embeddings similar in spirit to predictive approaches. Architecturally, the network runs parallel Conv1D branches with kernel sizes 3, 5, and 7 (capturing different n-gram patterns), applies max-pooling and flattening per branch, then concatenates the branch representations and outputs six sigmoid probabilities (one per label).
 
 ## Results and conclusion
 Using a 5-model ensemble (mean of predicted probabilities), the model achieves strong discrimination across all labels.
